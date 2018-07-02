@@ -14,9 +14,10 @@ function SinopiaMongodb(config, sinopia) {
     mongoose.connect(mongodb_uri, {
         auth: {
             user: config['username'],
-            password: config['password']
+            password: config['password'],
+            useMongoClient: true
         },           
-    }, true, function (err) {
+    }, function (err) {
         if (err) { throw err; }
     });
 
