@@ -15,9 +15,8 @@ function SinopiaMongodb(config, sinopia) {
         auth: {
             user: config['username'],
             password: config['password']
-        },
-        true,             
-    }, function (err) {
+        },           
+    }, true, function (err) {
         if (err) { throw err; }
     });
 
