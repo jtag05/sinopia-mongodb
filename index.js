@@ -10,7 +10,7 @@ function SinopiaMongodb(config, sinopia) {
         throw new Error('Need a valid host in config file.');
     }
 
-    const mongodb_uri = `mongodb://${config['host']}${config['port'] ? `:${config['port']}` : ''}/${config['database'] ? config['database'] : ''}`;
+    const mongodb_uri = `mongodb://${config['username']:${config['password']@${config['host']}${config['port'] ? `:${config['port']}` : ''}/${config['database'] ? config['database'] : ''}`;
     mongoose.connect(mongodb_uri, function (err) {
         if (err) { throw err; }
     });
