@@ -13,8 +13,8 @@ function SinopiaMongodb(config, sinopia) {
     const mongodb_uri = `mongodb://${config['host']}${config['port'] ? `:${config['port']}` : ''}/${config['database'] ? config['database'] : ''}`;
     mongoose.connect(mongodb_uri, {
         auth: {
-            user: ${config['username']},
-            password: ${config['password']}
+            user: config['username'],
+            password: config['password']
         },
         true,             
     }, function (err) {
